@@ -256,9 +256,9 @@ namespace PInvoke.Win32
     public static class Memory
     {
         [DllImport("kernel32.dll", SetLastError=true)]
-        public static extern bool SetProcessWorkingSetSizeEx( IntPtr proc, long min, long max , int flags );
+        public static extern bool SetProcessWorkingSetSizeEx( IntPtr proc, UInt64 min, UInt64 max , UInt32 flags );
         [DllImport("kernel32.dll", SetLastError=true)]
-        public static extern bool GetProcessWorkingSetSizeEx( IntPtr hProcess, ref long min, ref long max , ref int flags );
+        public static extern bool GetProcessWorkingSetSizeEx( IntPtr hProcess, ref UInt64 min, ref UInt64 max , ref UInt32 flags );
     }
     public static class UserInput
     {  
